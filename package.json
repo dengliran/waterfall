@@ -1,0 +1,31 @@
+{
+  "name": "waterfall",
+  "version": "1.0.0",
+  "description": "Waterfall plugin based on jquery",
+  "main": "index.js",
+  "scripts": {
+    "test": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dengliran/waterfall.git"
+  },
+  "keywords": [
+    "waterfall",
+    "jquery"
+  ],
+  "author": "dengliran",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dengliran/waterfall/issues"
+  },
+  "homepage": "https://github.com/dengliran/waterfall#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-header": "^1.8.8",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-uglify": "^2.1.2"
+  }
+}
