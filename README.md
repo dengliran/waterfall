@@ -1,4 +1,6 @@
 # 基于jQuery的瀑布流插件
+![demo](https://raw.githubusercontent.com/dengliran/waterfall/master/screenshot/waterfaa_demo.gif)  
+
 ### 使用方法
 ****
 ### 1. HTML结构
