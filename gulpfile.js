@@ -34,6 +34,8 @@ gulp.task('release',function (){
 	return gulp.start('assets','js')
 })
 
+gulp.task('prod',['release'])
+
 gulp.task('default',['release'],function(){
 	gulp.watch('src/js/jquery-waterfall.js',['js']);
 })

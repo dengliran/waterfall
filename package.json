@@ -4,7 +4,8 @@
   "description": "Waterfall plugin based on jquery",
   "main": "index.js",
   "scripts": {
-    "test": "gulp"
+    "dev": "gulp",
+    "build": "gulp prod"
   },
   "repository": {
     "type": "git",

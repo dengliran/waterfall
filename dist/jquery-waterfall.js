@@ -120,7 +120,7 @@
 					tremble = false;
 					setTimeout(function(){
 						tremble = true;
-					},1000)
+					},600)
 				}
 			})
 
