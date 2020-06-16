@@ -23,11 +23,6 @@ const JSOptions = {
   }
 }
 
-const CSSOptions = {
-  input: path.resolve(__dirname, '../src/theme/index.scss'),
-  output: path.resolve(__dirname, '../release/cdm-ui.css')
-}
-
 function genConfig (opt) {
   return {
     input: {
@@ -49,6 +44,5 @@ function mapOpts (opts, fn) {
 }
 
 module.exports = {
-  js: mapOpts(JSOptions, genConfig),
-  css: CSSOptions
+  js: mapOpts(JSOptions, genConfig)
 }

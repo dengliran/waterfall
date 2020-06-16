@@ -31,7 +31,6 @@ function build (builds) {
 }
 
 async function buildEntry ({ input, output: outputOption }) {
-  // let isProd = /min\.js$/.test(output.file)
   const bundle = await rollup.rollup(input)
   const { output } = await bundle.generate(outputOption)
   for (const chunkOrAsset of output) {
@@ -39,30 +38,6 @@ async function buildEntry ({ input, output: outputOption }) {
     console.log(blue(path.relative(process.cwd(), chunkOrAsset.fileName) + ' ' + getSize(chunkOrAsset.code)))
   }
   await bundle.write(outputOption)
-    // bundle.generate(output)
-    // .then(({ output }) => {
-      // if (isProd) {
-      //   let minified = uglify.minify(code, {
-      //     output: {
-      //       // ascii_only: true
-      //     }
-      //   }).code
-      //   return write(output.file, minified)
-      // } else {
-      //   return write(output.file, code)
-      // }
-    // })
-}
-
-function write (dest, code) {
-  return new Promise((resolve, reject) => {
-    fs.writeFile(dest, code, err => {
-      if (err) return reject(err)
-
-      console.log(blue(path.relative(process.cwd(), dest)) + ' ' + getSize(code))
-      resolve()
-    })
-  })
 }
 
 function getSize (code) {

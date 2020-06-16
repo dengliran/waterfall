@@ -31,7 +31,6 @@
       element = undefined;
     }
     this.configure(opts);
-    console.log(Settings);
     if (element) {
       Settings['container'] = document.querySelector(element);
     } else if (!Settings['container'] && Settings['containerClass']) {
