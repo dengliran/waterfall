@@ -117,25 +117,25 @@ Waterfall.prototype.checkImgloadstatus = function() {
 }
 
 Waterfall.prototype._setItemPosition = function() {
-    this.firstRow = [] // clear Array;
-    Settings.items.forEach((v, k) => {
-      if (k < this.colNum) {
-        this.firstRow.push(parseInt(v.offsetHeight))
-        v.style.top = 0
-        v.style.left = k * this.itemWidth + 'px'
-        v.style.position = 'absolute'
-      } else {
-        let minH = findArrayMaximin('min', this.firstRow)
-        let minkey = findArraykey(minH, this.firstRow)
-        v.style.top = minH + 'px'
-        v.style.left = this.itemWidth * minkey + 'px'
-        v.style.position = 'absolute'
-        this.firstRow[minkey] += parseInt(v.offsetHeight)
-      }
-    })
-    this._setContainerHeight()
-    Settings.fallEndCallback()
-    return this
+  this.firstRow = [] // clear Array;
+  Settings.items.forEach((v, k) => {
+    if (k < this.colNum) {
+      this.firstRow.push(parseInt(v.offsetHeight))
+      v.style.top = 0
+      v.style.left = k * this.itemWidth + 'px'
+      v.style.position = 'absolute'
+    } else {
+      let minH = findArrayMaximin('min', this.firstRow)
+      let minkey = findArraykey(minH, this.firstRow)
+      v.style.top = minH + 'px'
+      v.style.left = this.itemWidth * minkey + 'px'
+      v.style.position = 'absolute'
+      this.firstRow[minkey] += parseInt(v.offsetHeight)
+    }
+  })
+  this._setContainerHeight()
+  Settings.fallEndCallback()
+  return this
 }
 
 Waterfall.prototype._setContainerHeight = function() {
@@ -162,13 +162,13 @@ Waterfall.prototype.bindEvent = function() {
 }
 
 function findArrayMaximin(maximin,array){
-    if(maximin == "max") { 
-        return Math.max.apply(Math,array)
-    }else if(maximin == "min") {
-        return Math.min.apply(Math, array)
-    }
-
+  if(maximin == "max") { 
+      return Math.max.apply(Math,array)
+  }else if(maximin == "min") {
+      return Math.min.apply(Math, array)
+  }
 }
+
 function findArraykey(value,array){
     for(var i = 0;i<array.length;i++){
         if(array[i] === value){
